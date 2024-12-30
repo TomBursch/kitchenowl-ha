@@ -1,11 +1,13 @@
 {
-  "codeowners": ["@super-qua"],
+  "codeowners": ["@TomBursch"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/super-qua/ha_kitchenowl",
+  "documentation": "https://github.com/tombursch/kitchenowl-ha",
   "domain": "kitchenowl",
   "iot_class": "cloud_polling",
   "name": "KitchenOwl",
-  "requirements": [],
+  "requirements": [
+    "kitchenowl-python==0.0.1"
+  ],
   "version": "0.0.1"
 }
