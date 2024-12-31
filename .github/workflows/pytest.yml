@@ -1,0 +1,36 @@
+name: "Pytest"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  test:
+    name: "Lint & Test"
+    runs-on: "ubuntu-latest"
+    steps:
+    - name: "Checkout the repository"
+      uses: actions/checkout@v4
+
+    - name: "Set up Python"
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: "pip"
+
+    - name: "Install requirements"
+      run: python3 -m pip install -r requirements.test.txt
+
+    - name: "Lint"
+      run: python3 -m ruff check --output-format=github .
+
+    - name: "Format"
+      run: python3 -m ruff format . --check
+
+    - name: Test with pytest and coverage
+      run: |
+        pytest --cov=./ --cov-report=term

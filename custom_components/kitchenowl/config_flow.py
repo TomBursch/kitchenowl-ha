@@ -3,13 +3,7 @@
 import logging
 from typing import Any
 
-from kitchenowl_python.exceptions import (
-    KitchenOwlAuthException,
-    KitchenOwlRequestException,
-)
-from kitchenowl_python.kitchenowl import KitchenOwl
 import voluptuous as vol
-
 from homeassistant import config_entries
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_HOST, CONF_VERIFY_SSL
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
@@ -21,6 +15,11 @@ from homeassistant.helpers.selector import (
     TextSelectorConfig,
     TextSelectorType,
 )
+from kitchenowl_python.exceptions import (
+    KitchenOwlAuthException,
+    KitchenOwlRequestException,
+)
+from kitchenowl_python.kitchenowl import KitchenOwl
 
 from . import KitchenOwlConfigEntry
 from .const import CONF_HOUSEHOLD, DOMAIN

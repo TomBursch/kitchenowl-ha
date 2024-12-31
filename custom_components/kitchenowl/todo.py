@@ -4,8 +4,6 @@ import asyncio
 import logging
 from typing import TYPE_CHECKING
 
-from kitchenowl_python.types import KitchenOwlItem, KitchenOwlShoppingListItem
-
 from config.custom_components.kitchenowl import KitchenOwlConfigEntry
 from homeassistant.components.todo import (
     TodoItem,
@@ -16,6 +14,7 @@ from homeassistant.components.todo import (
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from kitchenowl_python.types import KitchenOwlItem, KitchenOwlShoppingListItem
 
 from .coordinator import KitchenOwlDataUpdateCoordinator, ShoppingListData
 

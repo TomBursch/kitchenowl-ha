@@ -1,9 +1,11 @@
 """Data Update Coordinator for the KitchenOwl integration."""
 
-from datetime import timedelta
 import logging
+from datetime import timedelta
 from typing import TypedDict
 
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from kitchenowl_python.exceptions import (
     KitchenOwlAuthException,
     KitchenOwlException,
@@ -11,9 +13,6 @@ from kitchenowl_python.exceptions import (
 )
 from kitchenowl_python.kitchenowl import KitchenOwl
 from kitchenowl_python.types import KitchenOwlShoppingList, KitchenOwlShoppingListItem
-
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .const import DOMAIN, SCAN_INTERVAL
 
@@ -37,7 +36,6 @@ class KitchenOwlDataUpdateCoordinator(
         self, hass: HomeAssistant, kitchenowl: KitchenOwl, household_id: str
     ) -> None:
         """Initialise the coordinator with Home Asisstant and KitchenOwl."""
-
         interval = timedelta(seconds=SCAN_INTERVAL)
         super().__init__(
             hass,
