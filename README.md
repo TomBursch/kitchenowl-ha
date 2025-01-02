@@ -1,11 +1,16 @@
 # KitchenOwl for Home Assistant
 
+An alpha version [KitchenOwl](https://kitchenowl.org) Home Assistant integration.
+
+The integration currently supports:
+- Adding and removing shopping list items
+
 ## Installation
 
-## Using HACS
+### Using HACS
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=TomBursch&repository=ktichenowl-ha&category=integration)
 
-## Manually
+### Manually
 
 To manually install the integration in your local Home Assistant instance
 
@@ -21,13 +26,16 @@ To manually install the integration in your local Home Assistant instance
    rm kitchenowl.zip
    ```
 5. Restart Home Assistant
-6. Set up the integration
+
+## Configuration
+
+1. Set up the integration
    - Go to Settings > Devices & Services
    - Add Integration
-7. Fill in your KitchenOwl settings
-   - The IP / URL of your KitchenOwl instance
-   - The Access Token (can be set up in your KitchenOwl Profile > Sessions)
-8. Select the household
+2. Fill in your KitchenOwl settings
+   - The IP / URL of your KitchenOwl instance (If you're using the KitchenOwl cloud enter `https://app.kitchenowl.org`)
+   - The Access Token (can be set up in KitchenOwl by going to Profile -> Sessions)
+3. Select the household
 
 ## Development
 
