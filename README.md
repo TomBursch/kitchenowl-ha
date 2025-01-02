@@ -2,7 +2,11 @@
 
 ## Installation
 
-This is not currently available in HACS, and the python package required is also not published on PyPi at the moment.
+## Using HACS
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=TomBursch&repository=ktichenowl-ha&category=integration)
+
+## Manually
+
 To manually install the integration in your local Home Assistant instance
 
 1. Clone the repository locally
@@ -37,6 +41,6 @@ Add this to the `devcontainer.json` to mount your local directory into the conta
 
 ```json
 "mounts":[
-    "source=<your_path>/custom_components,target=/workspaces/home-assistant-core/config/custom_components,type=bind,consistency=cached"
+    "source=<your_path>/custom_components,target=/workspaces/core/config/custom_components,type=bind,consistency=cached"
 ]
 ```

@@ -2,13 +2,14 @@
 
 import logging
 
+from kitchenowl_python.exceptions import KitchenOwlAuthException, KitchenOwlException
+from kitchenowl_python.kitchenowl import KitchenOwl
+
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_HOST, CONF_VERIFY_SSL, Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from kitchenowl_python.exceptions import KitchenOwlAuthException, KitchenOwlException
-from kitchenowl_python.kitchenowl import KitchenOwl
 
 from .const import CONF_HOUSEHOLD, DOMAIN
 from .coordinator import KitchenOwlDataUpdateCoordinator

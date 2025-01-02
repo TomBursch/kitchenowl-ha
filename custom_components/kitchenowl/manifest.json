@@ -3,11 +3,12 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/tombursch/kitchenowl-ha",
+  "issue_tracker": "https://github.com/tombursch/kitchenowl-ha/issues",
   "domain": "kitchenowl",
   "iot_class": "cloud_polling",
   "name": "KitchenOwl",
   "requirements": [
-    "kitchenowl-python==0.0.1"
+    "kitchenowl-python @ git+https://github.com/tombursch/kitchenowl-python@f4772bc0ed4b3b648c4573f394b9fafb7c22cb14"
   ],
   "version": "0.0.1"
 }
