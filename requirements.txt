@@ -4,5 +4,5 @@ pytest-asyncio
 pytest-homeassistant-custom-component
 kitchenowl-python==0.0.2
 colorlog==6.9.0
-homeassistant==2024.2.1
+homeassistant==2025.2.1
 ruff==0.8.4
