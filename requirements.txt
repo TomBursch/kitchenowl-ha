@@ -2,7 +2,7 @@ pytest
 pytest-cov
 pytest-asyncio
 pytest-homeassistant-custom-component
-kitchenowl-python @ git+https://github.com/tombursch/kitchenowl-python@f4772bc0ed4b3b648c4573f394b9fafb7c22cb14
+kitchenowl-python==0.0.2
 colorlog==6.9.0
-homeassistant==2024.12.5
-ruff==0.8.3
+homeassistant==2024.2.1
+ruff==0.8.4
