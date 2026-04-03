@@ -123,7 +123,7 @@ class KitchenowlConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors["base"] = "cannot_connect"
             if not errors:
                 await self.async_set_unique_id(
-                    f"{user["id"]}_{user_input[CONF_HOUSEHOLD]}"
+                    f"{user['id']}_{user_input[CONF_HOUSEHOLD]}"
                 )
                 self._abort_if_unique_id_configured()
                 return self.async_create_entry(title="KitchenOwl", data=self.data)
@@ -191,7 +191,7 @@ class KitchenowlConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors["base"] = "cannot_connect"
             if not errors:
                 if (
-                    f"{user["id"]}_{self.config_entry.data[CONF_HOUSEHOLD]}"
+                    f"{user['id']}_{self.config_entry.data[CONF_HOUSEHOLD]}"
                     == self.config_entry.unique_id
                 ):
                     return self.async_update_reload_and_abort(
@@ -243,7 +243,7 @@ class KitchenowlConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors["base"] = "cannot_connect"
             if not errors:
                 if (
-                    f"{user["id"]}_{self.config_entry.data[CONF_HOUSEHOLD]}"
+                    f"{user['id']}_{self.config_entry.data[CONF_HOUSEHOLD]}"
                     == self.config_entry.unique_id
                 ):
                     return self.async_update_reload_and_abort(

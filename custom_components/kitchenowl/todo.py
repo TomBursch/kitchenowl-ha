@@ -78,7 +78,7 @@ class KitchenOwlTodoListEntity(
         super().__init__(coordinator=coordinator)
         self._shoppinglist_id = shopping_list_data["shopping_list"]["id"]
         self._attr_unique_id = (
-            f"{entry_unique_id}_{shopping_list_data["shopping_list"]["id"]}"
+            f"{entry_unique_id}_{shopping_list_data['shopping_list']['id']}"
         )
         self._attr_name = shopping_list_data["shopping_list"]["name"]
 
